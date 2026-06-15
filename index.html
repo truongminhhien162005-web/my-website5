@@ -169,29 +169,14 @@ html,body{
 
 <script>
 
-const plane =
-document.getElementById("plane");
-
-const enemyPlane =
-document.getElementById("enemyPlane");
-
-const building =
-document.getElementById("building");
-
-const scoreText =
-document.getElementById("score");
-
-const startScreen =
-document.getElementById("startScreen");
-
-const gameOver =
-document.getElementById("gameOver");
-
-const finalScore =
-document.getElementById("finalScore");
-
-const replayBtn =
-document.getElementById("replayBtn");
+const plane = document.getElementById("plane");
+const enemyPlane = document.getElementById("enemyPlane");
+const building = document.getElementById("building");
+const scoreText = document.getElementById("score");
+const startScreen = document.getElementById("startScreen");
+const gameOver = document.getElementById("gameOver");
+const finalScore = document.getElementById("finalScore");
+const replayBtn = document.getElementById("replayBtn");
 
 let started = false;
 let running = true;
@@ -200,7 +185,7 @@ let planeY = 220;
 let velocity = 0;
 
 let buildingX = window.innerWidth;
-let buildingHeight = 120;
+let buildingHeight = 180;
 
 let enemyX = window.innerWidth + 400;
 let enemyY = 250;
@@ -211,14 +196,12 @@ let speed = 6;
 function createBuilding(){
 
     buildingHeight =
-    Math.floor(Math.random()*90)
-    + 80;
+    Math.floor(Math.random()*120) + 120;
 
     building.style.height =
     buildingHeight + "px";
 
-    buildingX =
-    window.innerWidth;
+    buildingX = window.innerWidth;
 
     building.innerHTML = "";
 
